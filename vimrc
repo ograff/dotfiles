@@ -114,3 +114,5 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 :imap jk <Esc>
 let g:ycm_show_diagnostics_ui = 1
+set exrc
+set secure
