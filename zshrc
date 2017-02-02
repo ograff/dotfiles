@@ -1,8 +1,11 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+export SHELL=/bin/zsh
+setopt no_err_exit
 # Path to your oh-my-zsh installation.
 export ZSH=/home/ograff/.oh-my-zsh
+
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -86,4 +89,5 @@ source $ZSH/oh-my-zsh.sh
 export EDITOR=vim
 bgnotify_threshold=6
 export WORKON_HOME=$HOME/.virtualenvs
+PATH=$PATH:~/.local/bin
 # source /usr/local/bin/virtualenvwrapper.sh
