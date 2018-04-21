@@ -3,4 +3,10 @@ config:
   create: true
   dotpath: dotfiles
 dotfiles:
+  f_tmux.conf:
+    dst: ~/.tmux.conf
+    src: tmux.conf
 profiles:
+  macbook:
+    dotfiles:
+    - f_tmux.conf
