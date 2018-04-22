@@ -3,6 +3,9 @@ config:
   create: true
   dotpath: dotfiles
 dotfiles:
+  d_nvim:
+    dst: ~/.config/nvim
+    src: config/nvim
   f_tmux.conf:
     dst: ~/.tmux.conf
     src: tmux.conf
@@ -10,3 +13,4 @@ profiles:
   macbook:
     dotfiles:
     - f_tmux.conf
+    - d_nvim
