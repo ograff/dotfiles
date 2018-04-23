@@ -1,0 +1,63 @@
+#!/usr/bin/env bash
+
+# {{@@ env['dotdrop_warning'] @@}}
+
+if [[ "$OSTYPE" == "darwin"* ]]; then
+    get_interface() {
+        interface="Wi-Fi"
+        if [ ! -z "$1" ]; then
+            interface="$1"
+        fi
+    }
+
+    cloudflare() {
+        get_interface "$1"
+        networksetup -setdnsservers "$interface" 1.1.1.1 1.0.0.1 2606:4700:4700::1111 2606:4700:4700::1001
+    }
+
+    print_servers() {
+        get_interface "$1"
+        echo "DNS servers are now:"
+        networksetup -getdnsservers "$interface"
+    }
+
+    dhcp() {
+        get_interface "$1"
+        networksetup -setdnsservers "$interface" empty
+    }
+
+    google() {
+        get_interface "$1"
+        networksetup -setdnsservers "$interface" 8.8.8.8 8.8.4.4
+    }
+else
+    echo "Unsupported OS"
+    exit 1
+fi
+
+if [ "$#" -gt 2 ]; then
+    echo "Illegal number of parameters."
+fi
+operation="$1"
+shift 1
+
+
+case $operation in
+    "cloudflare" )
+        echo "Switching to cloudflare DNS"
+        cloudflare "$1"
+    ;;
+    "dhcp" )
+        echo "Switching to DNS servers assigned by DHCP"
+        dhcp "$1"
+    ;;
+    "google" )
+        echo "Switching to Google DNS"
+        google "$1"
+    ;;
+    * )
+        echo "Invalid option for operation: $operation"
+        exit 1
+esac
+
+print_servers "$1"

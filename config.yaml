@@ -6,6 +6,9 @@ config:
   create: true
   dotpath: dotfiles
 dotfiles:
+  d_bin:
+    dst: ~/bin
+    src: bin
   d_nvim:
     dst: ~/.config/nvim
     src: config/nvim
@@ -20,3 +23,4 @@ profiles:
     dotfiles:
     - f_tmux.conf
     - d_nvim
+    - d_bin
