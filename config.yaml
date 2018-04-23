@@ -1,3 +1,6 @@
+actions:
+  install_dein: ~/dotfiles/setup_scripts/install_dein.sh
+  run_dein: nvim "+call dein#install()" "+qall"
 config:
   backup: true
   create: true
@@ -6,6 +9,9 @@ dotfiles:
   d_nvim:
     dst: ~/.config/nvim
     src: config/nvim
+    actions:
+      - install_dein
+      - run_dein
   f_tmux.conf:
     dst: ~/.tmux.conf
     src: tmux.conf
