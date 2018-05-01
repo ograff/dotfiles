@@ -32,6 +32,7 @@ if dein#load_state('~/.vim/dein')
        call dein#add('roxma/vim-hug-neovim-rpc')
     endif
 
+    call dein#add('ntpeters/vim-better-whitespace')
 
     call dein#end()
     call dein#save_state()
@@ -52,3 +53,6 @@ let g:airline_theme="solarized"
 " Bufferline
 let g:bufferline_echo = 0
 
+" Better Whitespace
+let g:better_whitespace_enabled=1
+let g:strip_whitespace_on_save=1
