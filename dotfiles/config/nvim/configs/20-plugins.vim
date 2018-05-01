@@ -1,6 +1,7 @@
 " {{@@ env['dotdrop_warning'] @@}}
 
 set rtp+=~/.vim/dein/repos/github.com/Shougo/dein.vim/
+call dein#begin(expand('~/.vim/dein'))
 
 if dein#load_state('~/.vim/dein')
     call dein#begin(expand('~/.vim/dein'))
@@ -22,6 +23,9 @@ if dein#load_state('~/.vim/dein')
     call dein#add('airblade/vim-gitgutter')
 
     call dein#add('easymotion/vim-easymotion')
+
+    call dein#add('junegunn/fzf', { 'build': './install --all', 'merged': 0 }) 
+    call dein#add('junegunn/fzf.vim', { 'depends': 'fzf' })
 
     if !has('nvim')
        call dein#add('roxma/nvim-yarp')
