@@ -23,4 +23,6 @@ call dein#add('christoomey/vim-tmux-navigator')
 
 call dein#add('airblade/vim-gitgutter')
 
+call dein#add('junegunn/fzf.vim')
+
 call dein#end()
