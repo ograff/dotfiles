@@ -30,7 +30,8 @@ if dein#load_state('~/.vim/dein')
     if !has('nvim')
        call dein#add('roxma/nvim-yarp')
        call dein#add('roxma/vim-hug-neovim-rpc')
-     endif
+    endif
+
 
     call dein#end()
     call dein#save_state()
