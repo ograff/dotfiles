@@ -9,3 +9,6 @@ print_red() {
 if ! type "cquery" > /dev/null; then
     print_red "Please install cquery for C/C++ support in Neovim."
 fi
+if ! type "pyls" > /dev/null; then
+    print_red "Please install pyls for python support in Neovim."
+fi
