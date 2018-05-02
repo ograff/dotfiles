@@ -12,3 +12,6 @@ fi
 if ! type "pyls" > /dev/null; then
     print_red "Please install pyls for python support in Neovim."
 fi
+if ! type "go-langserver" > /dev/null; then
+    print_red "Please install go-langserver for golang support in Neovim."
+fi

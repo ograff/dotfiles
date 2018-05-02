@@ -16,6 +16,7 @@ dotfiles:
     actions:
       - install_dein
       - run_dein
+      - check_install
   f_tmux.conf:
     dst: ~/.tmux.conf
     src: tmux.conf

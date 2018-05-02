@@ -3,7 +3,8 @@
 let g:LanguageClient_serverCommands = {
     \ 'cpp': ['cquery', '--log-file=/tmp/cq.log'],
     \ 'c': ['cquery', '--log-file=/tmp/cq.log'],
-    \ 'python': ['pyls', '--log-file=/tmp/pyls.log']
+    \ 'python': ['pyls', '--log-file=/tmp/pyls.log'],
+    \ 'go': ['go-langserver', '-gocodecompletion']
     \ }
 
 let g:LanguageClient_loadSettings = 1 " Use an absolute configuration path if you want system-wide settings
