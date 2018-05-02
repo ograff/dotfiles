@@ -13,6 +13,7 @@ nnoremap <Leader>bl :ls<CR>
 nnoremap <Leader>bb :bp<CR>
 nnoremap <Leader>bn :bn<CR>
 nnoremap <Leader>bg :e#<CR>
+nnoremap <Leader>bd :bd<CR>
 nnoremap <Leader>b1 :1b<CR>
 nnoremap <Leader>b2 :2b<CR>
 nnoremap <Leader>b3 :3b<CR>
