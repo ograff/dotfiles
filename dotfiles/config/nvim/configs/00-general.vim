@@ -46,3 +46,6 @@ set sidescroll=5
 
 "Reduce update time as advicsed by https://github.com/airblade/vim-gitgutter#getting-started
 set updatetime=100
+
+"For language server
+set hidden
