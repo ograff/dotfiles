@@ -32,6 +32,8 @@ if dein#load_state('~/.vim/dein')
         \ 'build': 'bash install.sh',
         \ })
 
+    call dein#add('Shougo/deoplete.nvim')
+
     if !has('nvim')
        call dein#add('roxma/nvim-yarp')
        call dein#add('roxma/vim-hug-neovim-rpc')
@@ -61,3 +63,6 @@ let g:bufferline_echo = 0
 " Better Whitespace
 let g:better_whitespace_enabled=1
 let g:strip_whitespace_on_save=1
+
+"Deoplete
+let g:deoplete#enable_at_startup = 1
