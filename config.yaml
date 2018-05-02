@@ -1,6 +1,7 @@
 actions:
   install_dein: ~/dotfiles/setup_scripts/install_dein.sh
   run_dein: nvim "+call dein#install()" "+qall"
+  check_install: ~/dotfiles/setup_scripts/check_installation.sh
 config:
   backup: true
   create: true
