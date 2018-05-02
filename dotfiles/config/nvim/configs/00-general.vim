@@ -43,3 +43,6 @@ set undofile
 set scrolloff=8                     "Start scrolling when we're 8 lines away from margins
 set sidescrolloff=15
 set sidescroll=5
+
+"Reduce update time as advicsed by https://github.com/airblade/vim-gitgutter#getting-started
+set updatetime=100
