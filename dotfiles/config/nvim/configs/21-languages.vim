@@ -1,3 +1,5 @@
+" {{@@ env['dotdrop_warning'] @@}}
+
 let g:LanguageClient_serverCommands = {
     \ 'cpp': ['cquery', '--log-file=/tmp/cq.log'],
     \ 'c': ['cquery', '--log-file=/tmp/cq.log'],
