@@ -1,7 +1,6 @@
 " {{@@ env['dotdrop_warning'] @@}}
 
 set rtp+=~/.vim/dein/repos/github.com/Shougo/dein.vim/
-call dein#begin(expand('~/.vim/dein'))
 
 if dein#load_state('~/.vim/dein')
     call dein#begin(expand('~/.vim/dein'))
